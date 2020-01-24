@@ -1,0 +1,42 @@
+<ui-view>
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:crimson">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" ui-sref="products">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="faq">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2 style="text-align:center">GOLDEN SHOE</h2>
+    <div class="row" style=" margin-left:70px">
+        <div class="col-sm-6" ng-click="vm.onItemSelected($index)" ng-repeat="product in vm.products"> 
+            <div class="card text-center" style="margin:10px; width:auto">
+                <div class="card-body" >
+                    <img style="width:318px ;height:318px"ng-src="{{product.image}}" class=" card-img-top" alt="...">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text">Description: {{product.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ui-view>

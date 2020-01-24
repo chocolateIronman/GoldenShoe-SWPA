@@ -1,0 +1,100 @@
+<ui-view>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:crimson">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" ui-sref="products">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="faq">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2 style="text-align:center">GOLDEN SHOE</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Description:</h4>
+
+                <p>{{vm.product.description || 'description'}} </p>
+                <h4>Price:</h4>
+                <p>{{vm.product.price || 'price'}}</p>
+                <h4>Colour:</h4>
+                <p>{{vm.product.colour || 'colour'}}</p>
+            </div>
+            <div class="col">
+                <img style="width:318px ;height:318px" ng-src="{{vm.product.image}}" alt="no image">
+                <button type="button" class="btn btn-primary" ng-show="!vm.noProducts()">Buy</button>
+                <button type="button" class="btn btn-dark" ng-show="vm.noProducts()">Out of Stock</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Women Shoe Sizes Chart
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                        <img style="width:318px ;height:318px" src="https://www.tripsavvy.com/thmb/4UevmUmyRe7nkw2bYIoMaEMExNk=/734x521/filters:no_upscale():max_bytes(150000):strip_icc()/womens-shoes-56a3df805f9b58b7d0d43a40.JPG" class=" card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Man Shoe Sizes Chart
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                        <img style="width:318px ;height:318px" src="https://i.pinimg.com/originals/b5/bc/80/b5bc808f6a5fb2a1182c772410867f91.jpg" class=" card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Kids Shoe Size Chart
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                        <img style="width:318px ;height:318px" src="https://www.shooz4kidz.com/images/stories/pics/puma-kids-size-chart.jpg" class=" card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ui-view>
