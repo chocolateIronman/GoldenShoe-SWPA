@@ -12,7 +12,7 @@
             $stateProvider.state('products',{
                 cache: false,
                 url:'/home',
-                templateUrl:'/GoldenShoe-SWPA/scripts/states/products.html',
+                templateUrl:'/scripts/states/products.html',
                 controller:'productsCtrl as vm'
             });
 
