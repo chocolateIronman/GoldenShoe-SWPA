@@ -9,7 +9,7 @@
             $stateProvider.state('faq', {
                 cache: false,
                 url: '/faq',
-                templateUrl: '/scripts/states/faq.html',
+                templateUrl: 'scripts/states/faq.html',
                 controller: 'faqCtrl as vm'
             });
 

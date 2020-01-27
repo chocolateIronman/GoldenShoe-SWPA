@@ -7,11 +7,7 @@ angular.module('starter', [
     'faqjs',
     'ngResource'
 ])
-    .config(['$httpProvider', function ($httpProvider) {
-
-        $httpProvider.xsrfWhitelistedOrigins = ['https://goldenshoeapi.herokuapp.com:443'];
-        
-    }])
+    
     .run(function ($state, $rootScope) {
         $rootScope.$on('$stateChangeError', function (event) {
             event.preventDefault();

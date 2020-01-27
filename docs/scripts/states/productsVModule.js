@@ -12,7 +12,7 @@
             $stateProvider.state('productView', {
                 cache: false,
                 url: '/product',
-                templateUrl: '/scripts/states/productV.html',
+                templateUrl: 'scripts/states/productV.html',
                 params: { 'selected': 0 },
                 controller: 'productVCtrl as vm'
             });
