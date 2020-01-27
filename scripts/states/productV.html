@@ -26,7 +26,7 @@
         </div>
     </nav>
     <h2 style="text-align:center">GOLDEN SHOE</h2>
-    <div ng-hide="false">
+    <div ng-hide="!vm.product">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -39,6 +39,7 @@
                     <p>{{vm.product.colour || 'colour'}}</p>
                 </div>
                 <div class="col">
+                    <p>{{vm.product.name}}</p>
                     <img style="width:318px ;height:318px" ng-src="{{vm.product.image}}" alt="no image">
                     <button type="button" class="btn btn-primary" ng-show="vm.product.quantity>0" >Buy</button>
                     <button type="button" class="btn btn-dark" ng-show="vm.product.quantity==0">Out of Stock</button>
@@ -104,7 +105,7 @@
         </div>
     </div>
 
-    <div ng-show="false">
+    <div ng-show="!vm.product">
         <p>We are sorry we can't get this!</p>
         <button>Try Again</button>
     </div>
