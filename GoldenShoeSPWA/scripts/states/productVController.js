@@ -19,17 +19,20 @@
         ) {
             var vm = angular.extend(this, {
                 product: {
-                    name: "no name",
-                    description: "no description",
-                    quantity: "no quanityt",
-                    price: "no price",
-                    image: "no image",
-                    category: "no category",
-                    colour: "no colour"
-                }
+                    name: null,
+                    description: null,
+                    quantity: 0,
+                    price: 0.0,
+                    image: null,
+                    category: null,
+                    colour: null
+                },
+                newProduct : {}
             })
 
+
             var params = $stateParams;
+            var productID=$stateParams.productID;
 
             productsSrvc.getProduct(params.selected).then(
                 function successCallback(response) {
@@ -40,14 +43,11 @@
                 },
                 function errorCallback(response) {
                     console.error(response);
+                    vm.product=null;
                 }
             );
 
-            vm.noPoducts = function(){
-                console.log(vm.product.quantity);
-                return vm.product.quantity == "0";
-                
-            };
+           
 
             return vm;
 

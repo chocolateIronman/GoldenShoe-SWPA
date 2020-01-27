@@ -14,7 +14,7 @@
                 url: '/product',
                 templateUrl: '/scripts/states/productV.html',
                 params: { 'selected': 0 },
-                controller: 'productVCtrl'
+                controller: 'productVCtrl as vm'
             });
 
 

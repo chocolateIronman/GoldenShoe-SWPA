@@ -39,6 +39,14 @@
             }))
         }
 
+        service.updateProduct=function updateProduct(product,ProductID){
+            return($http({
+                method: 'PUT',
+                url: 'https://goldenshoeapi.herokuapp.com/product/'+ProductID,
+                data: product
+            }))
+        }
+
         return service;
     }
 })();
